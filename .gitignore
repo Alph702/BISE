@@ -12,3 +12,4 @@ wheels/
 *.ipynb
 Photos/*
 *.env
+logs/*
