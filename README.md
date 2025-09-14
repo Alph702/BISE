@@ -39,6 +39,34 @@ graph TD
     G --> H[Logs];
 ```
 
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant StreamlitApp
+    participant PlaywrightBot
+    participant BISEWebsite
+
+    User->>StreamlitApp: Uploads Excel file
+    User->>StreamlitApp: Uploads Photos
+    User->>StreamlitApp: Enters credentials
+    User->>StreamlitApp: Clicks "Run"
+    StreamlitApp->>PlaywrightBot: fill_form_from_excel(data, username, password)
+    PlaywrightBot->>BISEWebsite: Navigates to login page
+    PlaywrightBot->>BISEWebsite: Submits credentials
+    BISEWebsite-->>PlaywrightBot: Returns session cookie
+    loop For each student in Excel file
+        PlaywrightBot->>BISEWebsite: Navigates to form page
+        PlaywrightBot->>BISEWebsite: Fills form with student data
+        PlaywrightBot->>BISEWebsite: Uploads student photo
+        PlaywrightBot->>BISEWebsite: Submits form
+        BISEWebsite-->>PlaywrightBot: Returns success/error message
+    end
+    PlaywrightBot-->>StreamlitApp: Process finished
+    StreamlitApp-->>User: Displays completion message
+```
+
 ## Installation & Setup
 
 Follow these steps to set up the project on your local machine.
