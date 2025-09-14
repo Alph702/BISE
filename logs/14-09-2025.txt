@@ -1,0 +1,8 @@
+2025-09-14 09:33:47 - ERROR - [E002] Error in Enrollment: Page.click: Unexpected token "/" while parsing css selector "/html/body/div[1]/div/div[1]/div[2]/ul/li[5]/ul/li[1]/a". Did you mean to CSS.escape it?
+Call log:
+  - waiting for /html/body/div[1]/div/div[1]/div[2]/ul/li[5]/ul/li[1]/a
+ by using Type ID
+2025-09-14 09:35:23 - ERROR - [E002] Error in Enrollment: Page.click: Unexpected token "/" while parsing css selector "/html/body/div[1]/div/div[1]/div[2]/ul/li[5]/ul/li[1]/a". Did you mean to CSS.escape it?
+Call log:
+  - waiting for /html/body/div[1]/div/div[1]/div[2]/ul/li[5]/ul/li[1]/a
+ by using Type ID
